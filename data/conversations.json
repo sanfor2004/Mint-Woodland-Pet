@@ -1,0 +1,237 @@
+{
+  "nodes": {
+    "greeting": {
+      "mood": "look",
+      "lines": [
+        "HI, how you doing?",
+        "How is your day going?",
+        "Got a little energy left?",
+        "How is work treating you?",
+        "Is today being kind to you?",
+        "How is your mood right now?",
+        "Want a tiny check-in?",
+        "How are things on your side?",
+        "Feeling okay, friend?",
+        "How has your morning been?",
+        "How is your afternoon going?",
+        "Are you enjoying your day?",
+        "How is that task going?",
+        "Feeling bright or a little cloudy?",
+        "How is your energy today?",
+        "Has anything made you smile?",
+        "How are you holding up?",
+        "Is this a good moment to chat?",
+        "How is your little corner of the world?",
+        "What kind of day are we having?"
+      ],
+      "answers": [
+        {
+          "label": "Doing well",
+          "next": "good"
+        },
+        {
+          "label": "Feel bad",
+          "next": "bad"
+        }
+      ]
+    },
+    "good": {
+      "mood": "happy",
+      "lines": [
+        "That's lovely! What made today good?",
+        "Yay! Was it a little win or a peaceful moment?",
+        "I'm happy for you. What felt best?"
+      ],
+      "answers": [
+        {
+          "label": "A small win",
+          "next": "win"
+        },
+        {
+          "label": "Just feeling calm",
+          "next": "calm"
+        }
+      ]
+    },
+    "bad": {
+      "mood": "sad",
+      "lines": [
+        "I'll sit with you. Want a little pause?",
+        "Sorry it's a rough one. What would help right now?",
+        "We can take it gently. Want company?"
+      ],
+      "answers": [
+        {
+          "label": "A short break",
+          "next": "break"
+        },
+        {
+          "label": "Stay beside me",
+          "next": "company"
+        }
+      ]
+    },
+    "win": {
+      "mood": "happy",
+      "lines": [
+        "Little wins count. Pika high-five!",
+        "You did a thing! I'm cheering for you."
+      ],
+      "answers": [
+        {
+          "label": "Thank you, Pika",
+          "next": "rest"
+        },
+        {
+          "label": "Water break?",
+          "next": "water"
+        }
+      ]
+    },
+    "calm": {
+      "mood": "idle",
+      "lines": [
+        "A quiet day together sounds good."
+      ],
+      "answers": [
+        {
+          "label": "Keep me company",
+          "next": "company"
+        },
+        {
+          "label": "Let's take a break",
+          "next": "break"
+        }
+      ]
+    },
+    "break": {
+      "mood": "idle",
+      "lines": [
+        "Unclench your shoulders. One easy breath with me."
+      ],
+      "answers": [
+        {
+          "label": "That feels better",
+          "next": "calm"
+        },
+        {
+          "label": "I'll keep working",
+          "next": "rest"
+        }
+      ]
+    },
+    "company": {
+      "mood": "idle",
+      "lines": [
+        "Okay. No need to talk. I'll stay nearby."
+      ],
+      "answers": [
+        {
+          "label": "Thanks, little buddy",
+          "next": "rest"
+        },
+        {
+          "label": "Let's chat",
+          "next": "greeting"
+        }
+      ]
+    },
+    "water": {
+      "mood": "thirsty",
+      "lines": [
+        "Tap tap! I'm thirsty. Water break together?"
+      ],
+      "answers": [
+        {
+          "label": "Here's some water",
+          "next": "hydrated"
+        },
+        {
+          "label": "In a little while",
+          "next": "rest"
+        }
+      ]
+    },
+    "hydrated": {
+      "mood": "drink",
+      "lines": [
+        "Ahh! Thank you. That hit the spot."
+      ],
+      "answers": [
+        {
+          "label": "You're welcome",
+          "next": "rest"
+        },
+        {
+          "label": "How are you?",
+          "next": "pika"
+        }
+      ]
+    },
+    "pika": {
+      "mood": "wave",
+      "lines": [
+        "Quite sparkly today. Especially with you around."
+      ],
+      "answers": [
+        {
+          "label": "Have a berry",
+          "next": "snack"
+        },
+        {
+          "label": "Need a quiet moment?",
+          "next": "grumpy"
+        }
+      ]
+    },
+    "rest": {
+      "mood": "idle",
+      "lines": [
+        "I'll be right here. You do your thing."
+      ],
+      "answers": [
+        {
+          "label": "How are you, Pika?",
+          "next": "pika"
+        },
+        {
+          "label": "Water break",
+          "next": "water"
+        }
+      ]
+    },
+    "snack": {
+      "mood": "eat",
+      "lines": [
+        "A berry for me? Thank you!",
+        "Mmm. A little snack makes my day."
+      ],
+      "answers": [
+        {
+          "label": "You're welcome",
+          "next": "rest"
+        },
+        {
+          "label": "Some water too?",
+          "next": "water"
+        }
+      ]
+    },
+    "grumpy": {
+      "mood": "angry",
+      "lines": [
+        "Just a little grumpy. A quiet moment will help."
+      ],
+      "answers": [
+        {
+          "label": "I'll sit with you",
+          "next": "company"
+        },
+        {
+          "label": "A berry might help",
+          "next": "snack"
+        }
+      ]
+    }
+  }
+}

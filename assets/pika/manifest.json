@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 2,
+  "reference": "reference/pika-original.png",
+  "character": "Pika woodland companion",
+  "status": "reviewed-with-notes",
+  "runtimeIntegration": "implemented-and-smoke-tested",
+  "moods": [
+    {
+      "id": "idle",
+      "strip": "moods/idle/strip.png",
+      "frames": [
+        "moods/idle/frame-00.png",
+        "moods/idle/frame-01.png",
+        "moods/idle/frame-02.png",
+        "moods/idle/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        240,
+        240,
+        240,
+        240
+      ],
+      "loop": true,
+      "selectedSource": "sources/idle/woodland-02.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "look",
+      "strip": "moods/look/strip.png",
+      "frames": [
+        "moods/look/frame-00.png",
+        "moods/look/frame-01.png",
+        "moods/look/frame-02.png",
+        "moods/look/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        240,
+        240,
+        240,
+        240
+      ],
+      "loop": true,
+      "selectedSource": "sources/look/woodland-01.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "wave",
+      "strip": "moods/wave/strip.png",
+      "frames": [
+        "moods/wave/frame-00.png",
+        "moods/wave/frame-01.png",
+        "moods/wave/frame-02.png",
+        "moods/wave/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        240,
+        240,
+        240,
+        240
+      ],
+      "loop": true,
+      "selectedSource": "sources/wave/woodland-01.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "happy",
+      "strip": "moods/happy/strip.png",
+      "frames": [
+        "moods/happy/frame-00.png",
+        "moods/happy/frame-01.png",
+        "moods/happy/frame-02.png",
+        "moods/happy/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        240,
+        240,
+        240,
+        240
+      ],
+      "loop": true,
+      "selectedSource": "sources/happy/woodland-02.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "sad",
+      "strip": "moods/sad/strip.png",
+      "frames": [
+        "moods/sad/frame-00.png",
+        "moods/sad/frame-01.png",
+        "moods/sad/frame-02.png",
+        "moods/sad/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        240,
+        240,
+        240,
+        240
+      ],
+      "loop": true,
+      "selectedSource": "sources/sad/woodland-01.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "angry",
+      "strip": "moods/angry/strip.png",
+      "frames": [
+        "moods/angry/frame-00.png",
+        "moods/angry/frame-01.png",
+        "moods/angry/frame-02.png",
+        "moods/angry/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        240,
+        240,
+        240,
+        240
+      ],
+      "loop": true,
+      "selectedSource": "sources/angry/woodland-01.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "sleep",
+      "strip": "moods/sleep/strip.png",
+      "frames": [
+        "moods/sleep/frame-00.png",
+        "moods/sleep/frame-01.png",
+        "moods/sleep/frame-02.png",
+        "moods/sleep/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        450,
+        450,
+        450,
+        450
+      ],
+      "loop": true,
+      "selectedSource": "sources/sleep/woodland-01.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "eat",
+      "strip": "moods/eat/strip.png",
+      "frames": [
+        "moods/eat/frame-00.png",
+        "moods/eat/frame-01.png",
+        "moods/eat/frame-02.png",
+        "moods/eat/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        240,
+        240,
+        240,
+        240
+      ],
+      "loop": true,
+      "selectedSource": "sources/eat/woodland-01.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "drink",
+      "strip": "moods/drink/strip.png",
+      "frames": [
+        "moods/drink/frame-00.png",
+        "moods/drink/frame-01.png",
+        "moods/drink/frame-02.png",
+        "moods/drink/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        240,
+        240,
+        240,
+        240
+      ],
+      "loop": true,
+      "selectedSource": "sources/drink/woodland-01.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "thirsty",
+      "strip": "moods/thirsty/strip.png",
+      "frames": [
+        "moods/thirsty/frame-00.png",
+        "moods/thirsty/frame-01.png",
+        "moods/thirsty/frame-02.png",
+        "moods/thirsty/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        240,
+        240,
+        240,
+        240
+      ],
+      "loop": true,
+      "selectedSource": "sources/thirsty/woodland-01.png",
+      "reviewStatus": "reviewed-with-notes"
+    },
+    {
+      "id": "thunder",
+      "strip": "moods/thunder/strip.png",
+      "frames": [
+        "moods/thunder/frame-00.png",
+        "moods/thunder/frame-01.png",
+        "moods/thunder/frame-02.png",
+        "moods/thunder/frame-03.png"
+      ],
+      "frameWidth": 96,
+      "frameHeight": 96,
+      "durationMs": [
+        160,
+        160,
+        160,
+        160
+      ],
+      "loop": true,
+      "selectedSource": "sources/thunder/woodland-02.png",
+      "reviewStatus": "reviewed-with-notes"
+    }
+  ]
+}
