@@ -1,8 +1,8 @@
-# Pika pixel-art assets
+# Mint Woodland Pet assets
 
-Active reference: [reference/pika-original.png](reference/pika-original.png).
-It is the user-selected original mint woodland character. The Pika name and
-folder remain unchanged.
+Active reference: [reference/mint-woodland-pet-original.png](reference/mint-woodland-pet-original.png).
+It is the user-selected original mint woodland character. This folder contains
+the active production assets for Mint Woodland Pet.
 
 ## Contents
 
@@ -30,10 +30,11 @@ attached. First idle output used a painted checkerboard and was rejected.
 A flat magenta staging background allowed deterministic transparent extraction.
 Happy/thunder were regenerated to remove jump-related size shrinkage.
 
-tools/prepare-pika.cjs extracts and registers the artwork; it does not generate
-poses. tools/validate-pika.cjs verifies dimensions, alpha, bounds, distinct frames,
-loop metadata and dialogue links. Use Node.js plus Sharp, optionally resolved
-through PIKA_SHARP_PATH. Preparation resets visual status for a fresh review.
+tools/prepare-mint-woodland-pet.cjs extracts and registers the artwork; it does
+not generate poses. tools/validate-mint-woodland-pet.cjs verifies dimensions,
+alpha, bounds, distinct frames, loop metadata and dialogue links. Use Node.js
+plus Sharp, optionally resolved through MINT_WOODLAND_PET_SHARP_PATH.
+Preparation resets visual status for a fresh review.
 
 The runtime has been updated to use these strips. The generated design keeps the
 selected character's features with small shading variations; it is not an exact

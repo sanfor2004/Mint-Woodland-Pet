@@ -1,20 +1,20 @@
-# Pika project specification
+# Mint Woodland Pet project specification
 
 Updated 2026-09-05.
 
 ## Selected character and experience
 
-Pika is a small, friendly desktop companion. The user selected the mint-green
-woodland creature to replace the earlier Pikachu artwork while retaining the
-Pika name, Pikachu-Pet repository folder and assets/pika organization.
+Mint Woodland Pet is a small, friendly desktop companion. The user selected the
+mint-green woodland creature as the active character. The Pikachu-Pet repository
+folder remains for continuity, while code and active assets use Mint naming.
 
-The active reference is assets/pika/reference/pika-original.png. Preserve its
+The active reference is assets/mint-woodland-pet/reference/mint-woodland-pet-original.png. Preserve its
 leaf ears, peach flower on viewer-left, plum eyes, cream belly, moss-like body,
 fern tail on viewer-right and golden pollen effects. The previous yellow
 reference is preserved in reference/archive and is no longer active.
 
-On launch, Pika greets in companion mode. The question remains stable until the
-user answers; the mood demonstration starts only when selected in settings. He
+On launch, Mint greets in companion mode. The question remains stable until the
+user answers; the mood demonstration starts only when selected in settings. Mint
 rests nearby, looks around, reacts to clicks, offers short conversations and
 naps when the user is idle. Petting triggers a playful golden spark reaction
 and a small upward-right movement. Desired daily sessions are one to eight hours;
@@ -48,11 +48,11 @@ it is not a pixel-for-pixel copy of the reference.
 
 ## Interface and interactions
 
-Pika starts near the bottom right above ordinary desktop windows. The sliders
+Mint starts near the bottom right above ordinary desktop windows. The sliders
 button opens settings. Speech uses a compact rounded bubble with two answer
 buttons stacked on the left.
 
-The accepted UI reference is assets/pika/reference/ui-reference.png. The compact
+The accepted UI reference is assets/mint-woodland-pet/reference/ui-reference.png. The compact
 675x435 composition uses a 235x42 white question bubble, plum monospace text,
 two vertically stacked dark-teal answer buttons, 8 px corner radii and a 28x28
 sliders/settings control to the character's right. The initial prompt is
@@ -61,7 +61,7 @@ sliders/settings control to the character's right. The initial prompt is
 Settings menu: demo on/off, quiet mode, voice, next screen, ask a question and close.
 It also provides smaller/larger controls across 230, 266, 300 and 333 px image
 sizes; 266 px is the daily-use default and 333 px preserves the supplied UI
-reference scale. Click Pika to pet him; dragging moves him continuously with the
+reference scale. Click Mint to pet the companion; dragging moves it continuously with the
 pointer. Only the union of visible sprite pixels plus a small click margin is
 draggable. The idle detector measures
 time since input, and large pointer motion briefly pauses wandering. The
@@ -99,8 +99,11 @@ the optional demo was slowed, active questions were protected from timed
 replacement, and rest UI now collapses automatically.
 
 2026-09-05: User supplied and approved a compact UI reference. Saved the image
-under assets/pika/reference, matched the runtime composition and settings icon,
+under assets/mint-woodland-pet/reference, matched the runtime composition and settings icon,
 and synchronized answer hit targets and render previews with the new layout.
 
-2026-09-04: Original woodland reference accepted, Pika naming retained, eleven
-moods generated and integrated. See docs/VALIDATION.md and assets/pika/qa/review.md.
+2026-09-05: Active product renamed Mint Woodland Pet. The repository remains
+Pikachu-Pet while code, active assets and documentation use Mint naming.
+
+2026-09-04: Original woodland reference accepted; eleven moods generated and
+integrated. See docs/VALIDATION.md and assets/mint-woodland-pet/qa/review.md.

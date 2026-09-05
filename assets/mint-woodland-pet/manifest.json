@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "reference": "reference/pika-original.png",
-  "character": "Pika woodland companion",
+  "reference": "reference/mint-woodland-pet-original.png",
+  "character": "Mint Woodland Pet",
   "status": "reviewed-with-notes",
   "runtimeIntegration": "implemented-and-smoke-tested",
   "moods": [

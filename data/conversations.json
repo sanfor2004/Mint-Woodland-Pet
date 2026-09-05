@@ -74,12 +74,12 @@
     "win": {
       "mood": "happy",
       "lines": [
-        "Little wins count. Pika high-five!",
+        "Little wins count. Mint high-five!",
         "You did a thing! I'm cheering for you."
       ],
       "answers": [
         {
-          "label": "Thank you, Pika",
+          "label": "Thank you, Mint",
           "next": "rest"
         },
         {
@@ -164,11 +164,11 @@
         },
         {
           "label": "How are you?",
-          "next": "pika"
+          "next": "mint"
         }
       ]
     },
-    "pika": {
+    "mint": {
       "mood": "wave",
       "lines": [
         "Quite sparkly today. Especially with you around."
@@ -191,8 +191,8 @@
       ],
       "answers": [
         {
-          "label": "How are you, Pika?",
-          "next": "pika"
+          "label": "How are you, Mint?",
+          "next": "mint"
         },
         {
           "label": "Water break",

@@ -2,7 +2,7 @@
 #include <windowsx.h>     // Handy macros such as GET_X_LPARAM for mouse messages.
 #include <gdiplus.h>      // GDI+ drawing classes: Bitmap, Graphics, Font, and Color.
 #include <sapi.h>         // Windows Speech API used for optional voice output.
-#include <mmsystem.h>     // PlaySound for Pika's small synthesized glass-tap sound.
+#include <mmsystem.h>     // PlaySound for the Mint Woodland Pet's synthesized glass-tap sound.
 #include <filesystem>     // Safe paths beside the executable.
 #include <fstream>        // Reading conversations.json from disk.
 #include <sstream>        // Loading an entire text file into one string.
@@ -45,7 +45,7 @@ float phase = 0; // Slowly changing value that drives gentle idle wandering.
 const std::vector<std::string> moods{"wave","idle","look","happy","sad","angry","sleep","eat","drink","thirsty","thunder"}; // Valid sprite folders.
 std::map<std::string,std::unique_ptr<Bitmap>> sprites; // Loaded strip bitmap for each mood.
 int previewFrame = -1; // Test renderer override; -1 means animate normally.
-const std::vector<std::wstring> moodLines{L"Hi! I\'m Pika.",L"I\'ll keep you company.",L"How are you feeling?",L"That tickles!",L"A quiet hug would help.",L"Just a little grumpy!",L"Zzz... a little nap.",L"Berry break!",L"Ahh, a refreshing sip.",L"I\'m thirsty. Water break?",L"A little woodland magic!"};
+const std::vector<std::wstring> moodLines{L"Hi! I\'m Mint.",L"I\'ll keep you company.",L"How are you feeling?",L"That tickles!",L"A quiet hug would help.",L"Just a little grumpy!",L"Zzz... a little nap.",L"Berry break!",L"Ahh, a refreshing sip.",L"I\'m thirsty. Water break?",L"A little woodland magic!"};
 int petSize() { return PET_SIZES[petSizeIndex]; } // Read the active image-size preset.
 int petX() { return PET_CENTER_X-petSize()/2; } // Centre the pet horizontally at every size.
 int petY() { return PET_IMAGE_BOTTOM-petSize(); } // Keep the image bottom aligned at every size.
@@ -125,7 +125,7 @@ void bounds(int x, int y) {
 }
 void region() {
     const RECT pet=petHitBounds(); // Reuse the tight pet target for hit testing.
-    HRGN r = CreateRectRgn(pet.left,pet.top,pet.right,pet.bottom); // Start the clickable window region with Pika.
+    HRGN r = CreateRectRgn(pet.left,pet.top,pet.right,pet.bottom); // Start the clickable window region with the pet.
     if(conversationVisible) {
         HRGN q = CreateRoundRectRgn(QUESTION_X,QUESTION_Y,QUESTION_X+QUESTION_W,QUESTION_Y+QUESTION_H,16,16); CombineRgn(r,r,q,RGN_OR); DeleteObject(q); // Add bubble then free temp region.
         HRGN answers = CreateRectRgn(45,ANSWER_TOP,ANSWER_RIGHT,ANSWER_TOP+ANSWER_H*2+ANSWER_GAP); CombineRgn(r,r,answers,RGN_OR); DeleteObject(answers); // Add both answer buttons.
@@ -167,7 +167,7 @@ void monoText(Graphics& g,const std::wstring& s,float x,float y,float w,float h,
     format.SetTrimming(StringTrimmingNone); format.SetFormatFlags(StringFormatFlagsNoWrap); // Do not wrap or replace text with ellipsis.
     g.DrawString(s.c_str(),-1,&font,RectF(x,y,w,h),&format,&b); // Draw the actual label.
 }
-int answerWidth(const std::wstring& label) { return std::max(93,std::min(220,13+int(label.size())*10)); } // Estimate a compact safe width from character count.
+int answerWidth(const std::wstring& label) { return (std::max)(93,(std::min)(220,13+int(label.size())*10)); } // Estimate a compact safe width from character count.
 void drawSettingsIcon(Graphics& g) {
     round(g,Color(6,66,69),SETTINGS_X,SETTINGS_Y,SETTINGS_SIZE,SETTINGS_SIZE,8); // Draw dark-teal rounded button.
     Pen rail(Color(205,236,231),1.5f); // Choose the pale line color for sliders.
@@ -210,10 +210,10 @@ void paint(HDC hdc) {
     g.SetSmoothingMode(SmoothingModeAntiAlias); // Smooth text and settings-icon lines.
     const auto elapsed = GetTickCount64()-stateAt; // Find delay since state changed.
     if(conversationVisible && elapsed>250) drawConversation(g,message,current()); // Reveal controls after short transition delay.
-    drawPet(g); // Draw Pika above the conversation surface.
+    drawPet(g); // Draw the Mint Woodland Pet above the conversation surface.
     if (menuOpen) {
         round(g,Color(255,255,255),MENU_X,MENU_Y,MENU_W,MENU_ITEM_H*MENU_ITEMS+16,8); // Draw white settings popup.
-        std::vector<std::wstring> labels{demo?L"✓ Demo loop — stop":L"Demo loop — start",quiet?L"✓ Quiet mode":L"Quiet mode",soundOn?L"✓ Voice on":L"Voice off",L"Make Pika smaller",L"Make Pika larger",L"Move to next screen",L"Ask me a question",L"Close Pika"}; // Build labels from state.
+        std::vector<std::wstring> labels{demo?L"✓ Demo loop — stop":L"Demo loop — start",quiet?L"✓ Quiet mode":L"Quiet mode",soundOn?L"✓ Voice on":L"Voice off",L"Make Mint smaller",L"Make Mint larger",L"Move to next screen",L"Ask a question",L"Close Mint"}; // Build labels from state.
         for (int i=0;i<MENU_ITEMS;++i) text(g,labels[i],MENU_X+16,float(MENU_Y+8+i*MENU_ITEM_H),MENU_W-32,MENU_ITEM_H,14,Color(30,54,55)); // Draw every menu row.
     }
     Graphics out(hdc); // Wrap the paint event's device context.
@@ -221,7 +221,7 @@ void paint(HDC hdc) {
 }
 BOOL CALLBACK collect(HMONITOR monitor,HDC,LPRECT,LPARAM arg) { reinterpret_cast<std::vector<HMONITOR>*>(arg)->push_back(monitor); return TRUE; } // Collect monitor handles during enumeration.
 LRESULT CALLBACK procedure(HWND h,UINT msg,WPARAM wp,LPARAM lp) {
-    switch(msg) { // Windows calls this once for every event sent to Pika's window.
+    switch(msg) { // Windows calls this once for every event sent to the pet's window.
     case WM_ERASEBKGND: return 1; // Skip default erase because paint draws the whole frame.
     case WM_PAINT: { PAINTSTRUCT ps; HDC dc=BeginPaint(h,&ps); paint(dc); EndPaint(h,&ps); return 0; } // Render one frame during paint event.
     case WM_TIMER: {
@@ -265,11 +265,11 @@ LRESULT CALLBACK procedure(HWND h,UINT msg,WPARAM wp,LPARAM lp) {
         InvalidateRect(h,nullptr,FALSE); return 0; // Refresh after any click action.
     }
     case WM_MOUSEMOVE: if(dragging) { POINT p; GetCursorPos(&p); moveWindow(dragBaseX+p.x-grab.x,dragBaseY+p.y-grab.y); return 0; } break; // Move smoothly while pointer is held.
-    case WM_LBUTTONUP: if(dragging) { POINT p; GetCursorPos(&p); int dx=p.x-grab.x,dy=p.y-grab.y; dragging=false; ReleaseCapture(); if(abs(dx)+abs(dy)<6) { demo=false; state("thunder",L"Pika! That tickles!"); showConversation(true); } else bounds(dragBaseX+dx,dragBaseY+dy); } return 0; // Pet on click; clamp only after drag release.
+    case WM_LBUTTONUP: if(dragging) { POINT p; GetCursorPos(&p); int dx=p.x-grab.x,dy=p.y-grab.y; dragging=false; ReleaseCapture(); if(abs(dx)+abs(dy)<6) { demo=false; state("thunder",L"Mint! That tickles!"); showConversation(true); } else bounds(dragBaseX+dx,dragBaseY+dy); } return 0; // Pet on click; clamp only after drag release.
     case WM_CAPTURECHANGED: dragging=false; return 0; // Stop dragging if another window takes mouse capture.
     case WM_DISPLAYCHANGE: bounds(baseX,baseY); return 0; // Re-clamp after monitor setup changes.
     case WM_DPICHANGED: bounds(baseX,baseY); return 0; // Re-clamp after a mixed-DPI monitor crossing.
-    case WM_KEYDOWN: if(wp==VK_ESCAPE) DestroyWindow(h); return 0; // Escape closes Pika.
+    case WM_KEYDOWN: if(wp==VK_ESCAPE) DestroyWindow(h); return 0; // Escape closes Mint.
     case WM_DESTROY: KillTimer(h,1); PostQuitMessage(0); return 0; // Cleanly end the app message loop.
     }
     return DefWindowProc(h,msg,wp,lp); // Let Windows handle any event we did not use.
@@ -292,16 +292,16 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR arguments,int) {
             for(const auto& a:n.at("answers").array) { wide(a.at("label").text); script.at("nodes").at(a.at("next").text); } // Verify labels and linked nodes.
         }
         current(); // Confirm the initial greeting node exists.
-    } catch(const std::exception& e) { MessageBoxA(nullptr,e.what(),"Pika configuration error",MB_ICONERROR); return 1; } // Show configuration errors before window creation.
+    } catch(const std::exception& e) { MessageBoxA(nullptr,e.what(),"Mint Woodland Pet configuration error",MB_ICONERROR); return 1; } // Show configuration errors before window creation.
     CoInitializeEx(nullptr,COINIT_APARTMENTTHREADED); // Start COM for speech services.
     CoCreateInstance(CLSID_SpVoice,nullptr,CLSCTX_ALL,IID_ISpVoice,reinterpret_cast<void**>(&voice)); // Try to create optional Windows voice.
     ULONG_PTR token; GdiplusStartupInput gd; GdiplusStartup(&token,&gd,nullptr); // Start GDI+ drawing library.
     wchar_t binaryPath[MAX_PATH]; GetModuleFileName(nullptr,binaryPath,MAX_PATH); // Find executable again for asset paths.
-    const auto assetRoot=std::filesystem::path(binaryPath).parent_path()/L"assets"/L"pika"/L"moods"; // Locate shipped mood strips.
+    const auto assetRoot=std::filesystem::path(binaryPath).parent_path()/L"assets"/L"mint-woodland-pet"/L"moods"; // Locate shipped mood strips.
     for(const auto& id:moods) {
         auto sprite=std::make_unique<Bitmap>((assetRoot/wide(id)/L"strip.png").c_str()); // Load one 384×96 PNG strip.
         if(sprite->GetLastStatus()!=Ok || sprite->GetWidth()!=384 || sprite->GetHeight()!=96) {
-            MessageBox(nullptr,(L"Missing or invalid Pika sprite: "+wide(id)+L". Keep assets/pika/moods beside the executable.").c_str(),L"Pika asset error",MB_ICONERROR); // Explain invalid asset.
+            MessageBox(nullptr,(L"Missing or invalid Mint Woodland Pet sprite: "+wide(id)+L". Keep assets/mint-woodland-pet/moods beside the executable.").c_str(),L"Mint Woodland Pet asset error",MB_ICONERROR); // Explain invalid asset.
             sprites.clear(); if(voice)voice->Release();CoUninitialize();GdiplusShutdown(token);return 2; // Release libraries then fail safely.
         }
         sprites.emplace(id,std::move(sprite)); // Store bitmap under its mood name.
@@ -318,7 +318,7 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR arguments,int) {
         Bitmap sheet(1280,1020,PixelFormat32bppARGB); // Prepare an all-moods contact sheet.
         {
             Graphics g(&sheet); g.Clear(Color(235,236,229)); g.SetSmoothingMode(SmoothingModeAntiAlias); // Start drawing contact sheet.
-            text(g,L"PIKA / woodland pixel-art moods",30,12,850,60,28); // Draw contact-sheet title.
+            text(g,L"MINT WOODLAND PET / pixel-art moods",30,12,850,60,28); // Draw contact-sheet title.
             text(g,L"11 moods / generated sprites / nearest-neighbor animation",30,65,1100,34,16); // Draw subtitle.
             for(int i=0;i<int(moods.size());++i) {
                 int x=20+(i%4)*315,y=116+(i/4)*295; round(g,Color(250,249,244),float(x),float(y),300,280,24); // Place one card in four-column grid.
@@ -348,8 +348,8 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR arguments,int) {
         // Keep GDI+ alive until the local Bitmap objects have been destroyed.
         return status==Ok?0:2; // Report whether contact sheet saved successfully.
     }
-    WNDCLASS wc{}; wc.hInstance=instance; wc.lpfnWndProc=procedure; wc.lpszClassName=L"PikaPrototype"; wc.hCursor=LoadCursor(nullptr,IDC_ARROW); RegisterClass(&wc); // Register custom window type.
-    windowHandle=CreateWindowEx(WS_EX_LAYERED|WS_EX_TOPMOST|WS_EX_TOOLWINDOW,wc.lpszClassName,L"Pika companion prototype",WS_POPUP,0,0,W,H,nullptr,nullptr,instance,nullptr); // Create borderless overlay.
+    WNDCLASS wc{}; wc.hInstance=instance; wc.lpfnWndProc=procedure; wc.lpszClassName=L"MintWoodlandPetPrototype"; wc.hCursor=LoadCursor(nullptr,IDC_ARROW); RegisterClass(&wc); // Register custom window type.
+    windowHandle=CreateWindowEx(WS_EX_LAYERED|WS_EX_TOPMOST|WS_EX_TOOLWINDOW,wc.lpszClassName,L"Mint Woodland Pet",WS_POPUP,0,0,W,H,nullptr,nullptr,instance,nullptr); // Create borderless overlay.
     SetLayeredWindowAttributes(windowHandle,RGB(255,0,255),255,LWA_COLORKEY); region(); // Make magenta transparent and set click area.
     RECT work; SystemParametersInfo(SPI_GETWORKAREA,0,&work,0); const RECT initialContent=contentBounds(); // Read primary usable desktop area.
     bounds(work.right-initialContent.right-20,work.bottom-initialContent.bottom-20); // Start near bottom-right, above taskbar.
@@ -363,7 +363,7 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR arguments,int) {
         visit("greeting");click(240,225);check(node=="good"&&!demo,1); // Test first greeting answer.
         visit("greeting");click(240,280);check(node=="bad"&&mood=="sad",2); // Test second greeting answer.
         visit("water");click(240,225);check(node=="hydrated"&&mood=="drink",3); // Test water branch.
-        visit("pika");click(240,225);check(node=="snack"&&mood=="eat",4); // Test food branch.
+        visit("mint");click(240,225);check(node=="snack"&&mood=="eat",4); // Test food branch.
         petClick(480,230);check(mood=="thunder",5); // Test pet reaction.
         const int originalSize=petSizeIndex; // Remember default size for menu checks.
         click(584,225);click(380,182);check(petSizeIndex==originalSize-1,6); // Test smaller size action.
@@ -376,7 +376,7 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR arguments,int) {
         check(baseX+testContent.right==testMonitor.rcWork.right&&baseY+testContent.bottom==testMonitor.rcWork.bottom,12); // Verify visible content reaches both edges.
         DestroyWindow(windowHandle);sprites.clear();if(voice)voice->Release();CoUninitialize();GdiplusShutdown(token);return failure?10+failure:0; // Clean up and report test result.
     }
-    started=stateAt=lastPrompt=lastWater=GetTickCount64(); GetCursorPos(&previousCursor); SetTimer(windowHandle,1,33,nullptr); ShowWindow(windowHandle,SW_SHOWNOACTIVATE); // Initialize behavior, run 30 FPS timer, then show Pika without focus.
+    started=stateAt=lastPrompt=lastWater=GetTickCount64(); GetCursorPos(&previousCursor); SetTimer(windowHandle,1,33,nullptr); ShowWindow(windowHandle,SW_SHOWNOACTIVATE); // Initialize behavior, run 30 FPS timer, then show Mint without focus.
     MSG msg; while(GetMessage(&msg,nullptr,0,0)>0) { TranslateMessage(&msg); DispatchMessage(&msg); } // Process Windows events until closed.
     sprites.clear(); if(voice) voice->Release(); CoUninitialize(); GdiplusShutdown(token); return 0; // Release all resources on normal exit.
 }

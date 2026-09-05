@@ -2,11 +2,12 @@
 
 ## Current user decisions
 
-Build a small C++ Windows desktop companion named Pika. Keep the existing
-Pikachu-Pet repository and assets/pika folder names.
+Build a small C++ Windows desktop companion named Mint Woodland Pet. Keep the
+existing Pikachu-Pet repository folder for continuity, while using the active
+assets/mint-woodland-pet folder and Mint naming in product-facing text and code.
 
 The user selected the ORIGINAL woodland creature as the replacement character.
-Active reference: assets/pika/reference/pika-original.png (mint body, leaf ears,
+Active reference: assets/mint-woodland-pet/reference/mint-woodland-pet-original.png (mint body, leaf ears,
 peach flower, cream belly, plum eyes, fern tail). The older yellow character
 reference is archived at reference/archive/pikachu-original.png and must not be
 used as the current generation reference.
@@ -22,7 +23,7 @@ Distinguish requested, implemented and verified work. Preserve unrelated changes
 
 ## Art and asset rules
 
-- Keep all active references, generated sources, mood sprites and QA under assets/pika.
+- Keep all active references, generated sources, mood sprites and QA under assets/mint-woodland-pet.
 - Preserve the chosen character's leaf ears, peach flower on viewer-left, cream
   belly, glossy plum eyes, fern tail on viewer-right and mint/sage palette.
 - Generate, visually compare with the reference, inspect frame transitions and
@@ -38,7 +39,7 @@ Distinguish requested, implemented and verified work. Preserve unrelated changes
 ## Product rules
 
 C++ remains the language direction. Qt Quick is optional future work, not an
-installed dependency. Follow assets/pika/reference/ui-reference.png: compact
+installed dependency. Follow assets/mint-woodland-pet/reference/ui-reference.png: compact
 white question bubble with plum monospace text, two vertically stacked dark-teal
 answers and an 8 px rounded sliders/settings button to the pet's right. Keep short
 voice, quiet mode, idle sleep, petting and restrained movement. Conversation
@@ -59,7 +60,7 @@ unblended so magenta does not appear as a pink fringe on the desktop.
 ## Verification
 
 Build C++ after changes. Run --validate, --self-test and --render for relevant
-changes. Use tools/validate-pika.cjs after asset or dialogue changes.
+changes. Use tools/validate-mint-woodland-pet.cjs after asset or dialogue changes.
 After generation, inspect reference-comparison.png, all-frames.png and loop
 previews. Preparation resets visual status: perform a fresh review before marking
 assets reviewed. Report native desktop observations separately from handler tests.
@@ -75,13 +76,14 @@ loads fixed mood strip paths; keep durations synchronized until that is refactor
   live pointer-following drag, companion-mode startup, stable active questions,
   collapsing rest UI, an eight-second demo cadence and longer prompt intervals.
 - 2026-09-05: User supplied a 675x435 UI reference. Saved it as
-  assets/pika/reference/ui-reference.png and matched its question, stacked
+  assets/mint-woodland-pet/reference/ui-reference.png and matched its question, stacked
   answers, sliders button, spacing, palette and 8 px corner treatment.
 - 2026-09-04: User described a quiet interactive desktop pet and selected C++.
 - 2026-09-04: User requested pixel art, eleven moods, JSON dialogue and iterative QA.
 - 2026-09-04: Earlier franchise-art generation attempts were blocked; historical
   prompts/errors remain in sources. Those failures are not the current asset status.
-- 2026-09-04: User chose the generated woodland reference, kept the name Pika,
-  and authorized all mood generation and continuation. Produced 44 frames and
+- 2026-09-05: User renamed the active product to Mint Woodland Pet. The repository
+  folder remains Pikachu-Pet, while active code, assets and documentation use Mint.
+- 2026-09-04: User chose the generated woodland reference and authorized all mood generation and continuation. Produced 44 frames and
   integrated eleven strips. Revised idle transparency/layout and happy/thunder
   size drift. Build, asset validation and native-handler smoke checks pass.

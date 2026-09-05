@@ -1,11 +1,11 @@
 # Product brief
 
-Pika is a small C++ desktop companion that stays nearby without demanding
+Mint Woodland Pet is a small C++ desktop companion that stays nearby without demanding
 attention. It greets, rests, looks around, reacts to petting, chats through two
 answer buttons and naps during inactivity.
 
 The user chose the original mint woodland design in
-assets/pika/reference/pika-original.png. The Pika name and folder structure remain.
+assets/mint-woodland-pet/reference/mint-woodland-pet-original.png. The repository folder remains Pikachu-Pet for continuity.
 Eleven pixel moods now cover ordinary presence, greetings, happy/sad/angry
 expressions, sleep, food, water and playful golden sparks.
 

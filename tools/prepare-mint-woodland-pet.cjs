@@ -1,8 +1,8 @@
 // Deterministic extraction/packaging of generated artwork; does not draw poses.
 const fs = require('node:fs');
 const path = require('node:path');
-const sharp = require(process.env.PIKA_SHARP_PATH || 'sharp');
-const root = path.resolve(__dirname, '../assets/pika');
+const sharp = require(process.env.MINT_WOODLAND_PET_SHARP_PATH || 'sharp');
+const root = path.resolve(__dirname, '../assets/mint-woodland-pet');
 const ids = ['idle','look','wave','happy','sad','angry','sleep','eat','drink','thirsty','thunder'];
 const SIZE = 96;
 const raw = (data,w=SIZE,h=SIZE) => sharp(data,{raw:{width:w,height:h,channels:4}});
@@ -113,7 +113,7 @@ async function main() {
   cards.push({input:await sharp({text:{text:ids[i].toUpperCase(),font:'Segoe UI 16',rgba:true}}).png().toBuffer(),left:(i%4)*240+72,top:Math.floor(i/4)*240+206});
  }
  await sharp({create:{width:960,height:720,channels:4,background:'#f6f3e8'}}).composite(cards).png().toFile(path.join(root,'qa/all-moods-contact-sheet.png'));
- const reference=await sharp(path.join(root,'reference/pika-original.png')).resize(250,250,{kernel:'nearest'}).png().toBuffer();
+ const reference=await sharp(path.join(root,'reference/mint-woodland-pet-original.png')).resize(250,250,{kernel:'nearest'}).png().toBuffer();
  const idle=await sharp(path.join(root,'moods/idle/frame-00.png')).resize(288,288,{kernel:'nearest'}).png().toBuffer();
  await sharp({create:{width:640,height:350,channels:4,background:'#f6f3e8'}}).composite([
   {input:reference,left:30,top:50},{input:idle,left:338,top:8},
@@ -121,7 +121,7 @@ async function main() {
   {input:await sharp({text:{text:'RUNTIME IDLE',font:'Segoe UI 16',rgba:true}}).png().toBuffer(),left:410,top:318}
  ]).png().toFile(path.join(root,'qa/reference-comparison.png'));
  fs.writeFileSync(path.join(root,'qa/geometry.json'),JSON.stringify({frames:qa,checks:'44 nonempty frames, safe margins, binary alpha, fixed scale and translation-only registration'},null,2));
- fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify({schemaVersion:2,reference:'reference/pika-original.png',character:'Pika woodland companion',status:'pending-visual-review',runtimeIntegration:'pending',moods:manifests},null,2));
+ fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify({schemaVersion:2,reference:'reference/mint-woodland-pet-original.png',character:'Mint Woodland Pet',status:'pending-visual-review',runtimeIntegration:'pending',moods:manifests},null,2));
  console.log('Prepared 44 transparent frames, 11 strips, 12 loops and QA sheets.');
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

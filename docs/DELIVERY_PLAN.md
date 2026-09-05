@@ -3,8 +3,8 @@
 ## Completed prototype work
 
 - [x] C++ Windows overlay, menu, quiet mode, voice and screen switching.
-- [x] Original woodland character selected by the user, still named Pika.
-- [x] Active reference under assets/pika/reference; old reference archived.
+- [x] Original woodland character selected by the user and named Mint Woodland Pet.
+- [x] Active reference under assets/mint-woodland-pet/reference; old reference archived.
 - [x] Eleven generated mood sets, forty-four transparent frames and eleven strips.
 - [x] Idle background/layout revision and happy/thunder size-drift revisions.
 - [x] Contact sheets, reference comparison and individual/combined looping previews.

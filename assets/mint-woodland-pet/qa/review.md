@@ -1,8 +1,8 @@
-# Woodland Pika visual review — 2026-09-04
+# Mint Woodland Pet visual review — 2026-09-04
 
 ## Reference and selected outputs
 
-The active reference is reference/pika-original.png, copied from the original
+The active reference is reference/mint-woodland-pet-original.png, copied from the original
 woodland concept chosen by the user. The old yellow character reference was
 preserved in reference/archive/pikachu-original.png.
 

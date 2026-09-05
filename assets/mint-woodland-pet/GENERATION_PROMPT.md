@@ -1,7 +1,7 @@
-# Pika woodland animation — reusable generation brief
+# Mint Woodland Pet animation — reusable generation brief
 
-The user selected the original woodland creature and kept the name Pika.
-Attach C:/www/Pikachu-Pet/assets/pika/reference/pika-original.png as an actual
+The user selected the original woodland creature as Mint Woodland Pet.
+Attach C:/www/Pikachu-Pet/assets/mint-woodland-pet/reference/mint-woodland-pet-original.png as an actual
 reference image. Do not attach the archived yellow character.
 
 ## Master prompt
@@ -54,9 +54,9 @@ three times, record it and report the limitation instead of declaring perfection
 
 ## Save locations
 
-All paths are under C:/www/Pikachu-Pet/assets/pika/.
+All paths are under C:/www/Pikachu-Pet/assets/mint-woodland-pet/.
 
-- reference/pika-original.png: selected reference, preserved.
+- reference/mint-woodland-pet-original.png: selected reference, preserved.
 - sources/<id>/woodland-NN.png: raw candidates.
 - sources/<id>/woodland-NN-prompt.txt: exact generation prompts.
 - moods/<id>/frame-00.png through frame-03.png: 96x96 RGBA.

@@ -1,4 +1,4 @@
-# Validation — woodland sprite build
+# Validation — Mint Woodland Pet sprite build
 
 Checked 2026-09-05.
 
@@ -10,7 +10,7 @@ Checked 2026-09-05.
 - --self-test: actual window-message handlers exercise good/bad answers,
   drinking, eating, petting, quiet toggling and demo restart without global input.
 - --render: native renderer exports eleven scene previews and the contact sheet.
-- tools/validate-pika.cjs: 44 nonempty 96x96 RGBA frames; safe margins; binary alpha;
+- tools/validate-mint-woodland-pet.cjs: 44 nonempty 96x96 RGBA frames; safe margins; binary alpha;
   no residual staging chroma; at least three distinct images per mood; eleven
   384x96 strips; eleven four-frame infinite GIF loops; an 88-frame combined loop;
   thirteen reachable dialogue nodes and twenty greetings.

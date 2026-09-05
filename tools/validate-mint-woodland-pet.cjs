@@ -1,8 +1,8 @@
 const fs=require('node:fs');
 const path=require('node:path');
 const crypto=require('node:crypto');
-const sharp=require(process.env.PIKA_SHARP_PATH||'sharp');
-const root=path.resolve(__dirname,'../assets/pika');
+const sharp=require(process.env.MINT_WOODLAND_PET_SHARP_PATH||'sharp');
+const root=path.resolve(__dirname,'../assets/mint-woodland-pet');
 async function main(){
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8'));
  if(manifest.moods.length!==11)throw Error('Expected eleven moods');
