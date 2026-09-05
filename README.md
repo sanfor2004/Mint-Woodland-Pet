@@ -12,6 +12,15 @@ runtime, assets, tools, UI, and documentation use **Mint Woodland Pet**.
 [Watch the combined animation loop](assets/mint-woodland-pet/qa/all-moods-loop-large.gif) ·
 [Compare sprites with the reference](assets/mint-woodland-pet/qa/reference-comparison.png)
 
+## UI reference
+
+![Accepted Mint Woodland Pet UI reference](assets/mint-woodland-pet/reference/ui-reference.png)
+
+The desktop UI follows this saved reference: a white question bubble with plum
+monospace text, two stacked dark-teal answers, and an 8 px rounded settings
+button on the pet’s right. The reference is kept with the active character
+assets so the layout can be checked again after future UI changes.
+
 ## What it does
 
 - Starts in calm companion mode; questions remain until answered.
