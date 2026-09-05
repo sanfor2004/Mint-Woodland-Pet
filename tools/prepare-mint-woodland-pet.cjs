@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 sanfor2004
+// SPDX-License-Identifier: MIT
+
 // Deterministic extraction/packaging of generated artwork; does not draw poses.
 const fs = require('node:fs');
 const path = require('node:path');

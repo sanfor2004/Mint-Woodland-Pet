@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a reproducible problem with Mint Woodland Pet
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve Mint Woodland Pet.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Build or start...
+        2. Click or drag...
+        3. Observe...
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit or version
+      placeholder: Git commit hash or release name
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional context
+      description: Add logs or screenshots with secrets and personal data removed.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
+        - label: I removed passwords, tokens, and private information.
+          required: true

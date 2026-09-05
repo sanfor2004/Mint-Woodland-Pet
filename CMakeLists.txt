@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 sanfor2004
+# SPDX-License-Identifier: MIT
+
 cmake_minimum_required(VERSION 3.20)
 project(MintWoodlandPet LANGUAGES CXX)
 add_executable(MintWoodlandPet WIN32 src/main.cpp)

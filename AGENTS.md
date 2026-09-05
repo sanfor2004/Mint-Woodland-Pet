@@ -35,6 +35,9 @@ Distinguish requested, implemented and verified work. Preserve unrelated changes
   stills for a missing action. Do not claim pixel-perfect identity.
 - Use nearest-neighbor rendering and integer placement.
 - Do not claim AI artwork has automatic legal clearance or CC0 status.
+- Software code, tools, dialogue data and project documentation outside assets
+  use MIT with Copyright © 2026 sanfor2004. Original Mint artwork remains under
+  ASSET_LICENSE.md; archived and poster references remain third-party material.
 
 ## Product rules
 
@@ -69,6 +72,10 @@ loads fixed mood strip paths; keep durations synchronized until that is refactor
 
 ## Decision history
 
+- 2026-09-05: User chose to open-source the software while preserving copyright.
+  Added MIT software licensing, separate protected-asset terms, copyright and
+  third-party reference notices, contribution/security/conduct/support guides,
+  issue forms, a pull request template, and SPDX headers.
 - 2026-09-05: User supplied morning-pixel-art and retro-title references for a
   GitHub and external marketing banner. Saved both under reference/poster and created a wide happy
   morning hero with Mint on the left looking toward the title on the right.

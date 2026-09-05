@@ -94,6 +94,12 @@ Four-frame art may benefit from additional in-between poses after user review.
 
 ## Latest decision record
 
+2026-09-05: The software was prepared for public open-source contribution under
+MIT, with Copyright © 2026 sanfor2004 retained. Mint character and marketing art
+remain separately protected; third-party historical and poster references are
+excluded from both licenses. Community, contribution, support, and security
+files document the public repository workflow.
+
 2026-09-05: Added a reusable GitHub and external marketing banner based on two user-supplied visual references.
 The final wide pixel-art composition shows Mint on the left in a happy morning
 woodland, looking curiously right toward the exact Mint Woodland Pet title, with

@@ -113,6 +113,28 @@ node tools/validate-mint-woodland-pet.cjs
 The validator checks all 44 frames, alpha and bounds, frame distinctness,
 strip dimensions, GIF loop metadata, and dialogue links.
 
+## Open source and artwork rights
+
+Copyright © 2026 sanfor2004.
+
+The software source, build files, tools, dialogue data, and project documentation
+outside `assets/` are open source under the [MIT License](LICENSE). The MIT terms
+allow use, modification, and distribution while requiring the copyright and
+permission notice to remain with substantial copies.
+
+The Mint Woodland Pet character, sprites, animations, banner, social preview,
+and other original visual assets are protected under the separate
+[Asset Rights Notice](ASSET_LICENSE.md). They are available for building,
+testing, and contributing to this project, but they are not released as reusable
+standalone artwork. Historical and poster inspiration images are reference-only;
+rights remain with their respective owners. See [NOTICE.md](NOTICE.md) for the
+complete repository boundary.
+
+Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), the
+[Code of Conduct](CODE_OF_CONDUCT.md), and [Security Policy](SECURITY.md) before
+opening a pull request or sensitive report. Repository changes are routed to
+`@sanfor2004` for review through `.github/CODEOWNERS`.
+
 ## Project map
 
 | Path | Purpose |
@@ -126,6 +148,7 @@ strip dimensions, GIF loop metadata, and dialogue links.
 | `assets/mint-woodland-pet/qa/` | Contact sheets, GIF loops, checks, and review notes. |
 | `tools/` | Asset preparation and validation scripts. |
 | `docs/` | Product specification, delivery plan, technical notes, and validation record. |
+| `.github/` | Issue forms and the pull request checklist. |
 
 ## Documentation
 
@@ -136,3 +159,6 @@ strip dimensions, GIF loop metadata, and dialogue links.
 - [Open decisions](docs/OPEN_DECISIONS.md)
 - [Validation record](docs/VALIDATION.md)
 - [Commented C++ source](src/main.cpp)
+- [License and copyright boundary](NOTICE.md)
+- [Contributing guide](CONTRIBUTING.md)
+- [Support guide](SUPPORT.md)

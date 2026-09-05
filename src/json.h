@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 sanfor2004
+// SPDX-License-Identifier: MIT
+
 #pragma once
 #include <map>
 #include <string>

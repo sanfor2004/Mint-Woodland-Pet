@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 sanfor2004
+// SPDX-License-Identifier: MIT
+
 #include <windows.h>      // Core Win32 window, monitor, timer, and message APIs.
 #include <windowsx.h>     // Handy macros such as GET_X_LPARAM for mouse messages.
 #include <gdiplus.h>      // GDI+ drawing classes: Bitmap, Graphics, Font, and Color.

@@ -20,6 +20,8 @@
   cross-monitor dragging and taskbar-aware visible-content placement.
 - [x] Wide GitHub and external marketing banner with saved visual references, happy morning woodland,
   curious rightward gaze, pixel-art title and a soft grounding shadow.
+- [x] MIT software license with retained copyright, separate protected-artwork
+  terms, reference exclusions, community health files, and contribution templates.
 
 ## Next review
 
