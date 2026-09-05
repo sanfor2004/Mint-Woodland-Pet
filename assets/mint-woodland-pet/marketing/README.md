@@ -3,6 +3,10 @@
 `mint-woodland-pet-banner.png` is the wide reusable marketing banner. It is the
 GitHub README hero and is also intended for external project promotion.
 
+`Social-Preview.png` is the GitHub social preview upload. It is exactly
+1280×640 px and uses an optimized indexed PNG so it stays below GitHub's 1 MB
+upload limit. The source banner remains unchanged.
+
 It uses the active Mint character reference for identity and combines two saved
 visual directions:
 

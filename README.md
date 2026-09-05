@@ -121,7 +121,7 @@ strip dimensions, GIF loop metadata, and dialogue links.
 | `src/json.h` | Small JSON parser used for dialogue. |
 | `data/conversations.json` | Questions, answers, branches, and matching moods. |
 | `assets/mint-woodland-pet/moods/` | Runtime sprites and horizontal strips. |
-| `assets/mint-woodland-pet/marketing/` | Reusable external banner and future project artwork. |
+| `assets/mint-woodland-pet/marketing/` | External banner, 1280×640 social preview, and future project artwork. |
 | `assets/mint-woodland-pet/reference/poster/` | Saved morning and pixel-title design references. |
 | `assets/mint-woodland-pet/qa/` | Contact sheets, GIF loops, checks, and review notes. |
 | `tools/` | Asset preparation and validation scripts. |
