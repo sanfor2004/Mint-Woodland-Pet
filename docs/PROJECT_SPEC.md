@@ -57,6 +57,9 @@ The accepted UI reference is assets/mint-woodland-pet/reference/ui-reference.png
 two vertically stacked dark-teal answer buttons, 8 px corner radii and a 28x28
 sliders/settings control to the character's right. The initial prompt is
 "HI, how you doing?" with "Doing well" and "Feel bad" answers.
+Short questions retain the 20.5 px reference type size. Longer dialogue wraps to
+at most two lines and uses the largest font size that keeps the complete message
+inside the same 235x42 bubble.
 
 Settings menu: demo on/off, quiet mode, voice, next screen, ask a question and close.
 It also provides smaller/larger controls across 230, 266, 300 and 333 px image
@@ -93,6 +96,10 @@ mixed-DPI and monitor-change checks; CPU/memory measurement and long-session tes
 Four-frame art may benefit from additional in-between poses after user review.
 
 ## Latest decision record
+
+2026-09-05: Fixed long question text escaping the bubble. Native measurement now
+preserves the reference typography for short prompts and automatically wraps and
+fits longer prompts within the existing bubble.
 
 2026-09-05: The software was prepared for public open-source contribution under
 MIT, with Copyright © 2026 sanfor2004 retained. Mint character and marketing art

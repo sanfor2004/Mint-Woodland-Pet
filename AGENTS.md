@@ -59,6 +59,8 @@ visible content rather than the transparent canvas at monitor work-area edges.
 
 The runtime uses magenta color-key transparency. Keep rounded UI surface edges
 unblended so magenta does not appear as a pink fringe on the desktop.
+Keep short questions at the 20.5 px reference size. Wrap longer questions to no
+more than two lines and select the largest size that fits inside the fixed bubble.
 
 ## Verification
 
@@ -72,6 +74,8 @@ loads fixed mood strip paths; keep durations synchronized until that is refactor
 
 ## Decision history
 
+- 2026-09-05: Fixed long question clipping by measuring the real dialogue,
+  wrapping to at most two lines, and scaling only the question font as needed.
 - 2026-09-05: User chose to open-source the software while preserving copyright.
   Added MIT software licensing, separate protected-asset terms, copyright and
   third-party reference notices, contribution/security/conduct/support guides,

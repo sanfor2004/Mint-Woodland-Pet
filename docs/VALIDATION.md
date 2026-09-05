@@ -26,6 +26,9 @@ Checked 2026-09-05.
   live-drag and calm-cadence behavior update.
 - Native handler self-test verifies smaller/larger controls and confirms that
   visible content reaches the bottom-right edges of the monitor work area.
+- Rendered the longest shipped dialogue line in `long-question-render.png` and
+  visually confirmed that its complete 50-character question wraps to two lines
+  inside the unchanged 235x42 bubble without clipping.
 
 ## Limits of verification
 

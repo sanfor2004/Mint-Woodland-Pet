@@ -170,6 +170,19 @@ void monoText(Graphics& g,const std::wstring& s,float x,float y,float w,float h,
     format.SetTrimming(StringTrimmingNone); format.SetFormatFlags(StringFormatFlagsNoWrap); // Do not wrap or replace text with ellipsis.
     g.DrawString(s.c_str(),-1,&font,RectF(x,y,w,h),&format,&b); // Draw the actual label.
 }
+void questionText(Graphics& g,const std::wstring& s,float x,float y,float w,float h) {
+    FontFamily family(L"Consolas"); // Keep the question in the reference UI's pixel-like monospace face.
+    SolidBrush brush(Color(104,42,70)); // Use the same plum question color at every fitted size.
+    StringFormat format; format.SetAlignment(StringAlignmentNear); format.SetLineAlignment(StringAlignmentCenter); // Left-align text and center one or two lines vertically.
+    format.SetTrimming(StringTrimmingEllipsisCharacter); format.SetFormatFlags(StringFormatFlagsLineLimit); // Wrap at words, limit drawing to the bubble, and keep a safe fallback.
+    for(float size=20.5f;size>=12.0f;size-=0.5f) { // Try the reference size first, then shrink only as much as the message needs.
+        Font font(&family,size,FontStyleRegular,UnitPixel); // Build this candidate font.
+        RectF measured; int charactersFitted=0,linesFilled=0; // Receive how much text fits inside the bubble's padded rectangle.
+        g.MeasureString(s.c_str(),-1,&font,RectF(x,y,w,h),&format,&measured,&charactersFitted,&linesFilled); // Measure with the same wrapping rules used for drawing.
+        if(charactersFitted>=int(s.size())&&linesFilled<=2) { g.DrawString(s.c_str(),-1,&font,RectF(x,y,w,h),&format,&brush); return; } // Draw the largest complete one- or two-line fit.
+    }
+    Font fallback(&family,12.0f,FontStyleRegular,UnitPixel); g.DrawString(s.c_str(),-1,&fallback,RectF(x,y,w,h),&format,&brush); // Extremely long custom text stays inside with ellipsis.
+}
 int answerWidth(const std::wstring& label) { return (std::max)(93,(std::min)(220,13+int(label.size())*10)); } // Estimate a compact safe width from character count.
 void drawSettingsIcon(Graphics& g) {
     round(g,Color(6,66,69),SETTINGS_X,SETTINGS_Y,SETTINGS_SIZE,SETTINGS_SIZE,8); // Draw dark-teal rounded button.
@@ -183,7 +196,7 @@ void drawSettingsIcon(Graphics& g) {
 }
 void drawConversation(Graphics& g,const std::wstring& line,const Json& conversation) {
     round(g,Color(255,255,255),QUESTION_X,QUESTION_Y,QUESTION_W,QUESTION_H,8); // Draw white question bubble.
-    monoText(g,line,65,151,215,38,20.5f,Color(104,42,70)); // Draw its plum-colored question text.
+    questionText(g,line,65,149,211,38); // Wrap and fit long questions inside the bubble while preserving the reference size for short text.
     const auto& options=conversation.at("answers").array; // Read the node's two JSON answer choices.
     for(size_t i=0;i<options.size()&&i<2;++i) {
         const auto label=wide(options[i].at("label").text); const int width=answerWidth(label); // Convert label and size its button.
@@ -346,6 +359,12 @@ int WINAPI wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR arguments,int) {
             mood="happy"; message=L"HI, how you doing?"; previewFrame=0; stateAt=GetTickCount64(); drawConversation(g,message,current()); drawPet(g); // Draw exact reference scene.
             petSizeIndex=savedSize; // Restore user's active size preset.
             reference.Save((output/L"ui-reference-render.png").c_str(),&png,nullptr); // Save comparison image.
+        }
+        {
+            Bitmap longQuestion(W,H,PixelFormat32bppARGB); Graphics g(&longQuestion); g.Clear(Color(102,102,102)); g.SetSmoothingMode(SmoothingModeAntiAlias); // Create a regression preview for the longest question style.
+            const auto savedNode=node; node="bad"; mood="sad"; message=L"Sorry it's a rough one. What would help right now?"; previewFrame=0; stateAt=GetTickCount64(); // Select the longest real dialogue line and its answers.
+            drawConversation(g,message,current()); drawPet(g); node=savedNode; // Render the fitted two-line question, then restore dialogue state.
+            longQuestion.Save((output/L"long-question-render.png").c_str(),&png,nullptr); // Keep the visual regression image beside other native previews.
         }
         if(voice) voice->Release(); CoUninitialize(); // Release optional COM voice before exit.
         // Keep GDI+ alive until the local Bitmap objects have been destroyed.

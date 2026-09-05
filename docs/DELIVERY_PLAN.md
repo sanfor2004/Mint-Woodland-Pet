@@ -22,6 +22,8 @@
   curious rightward gaze, pixel-art title and a soft grounding shadow.
 - [x] MIT software license with retained copyright, separate protected-artwork
   terms, reference exclusions, community health files, and contribution templates.
+- [x] Adaptive question text measurement, two-line wrapping, and a long-dialogue
+  native render regression preview.
 
 ## Next review
 
