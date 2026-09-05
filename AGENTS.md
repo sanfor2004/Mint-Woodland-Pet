@@ -70,7 +70,7 @@ loads fixed mood strip paths; keep durations synchronized until that is refactor
 ## Decision history
 
 - 2026-09-05: User supplied morning-pixel-art and retro-title references for a
-  GitHub poster. Saved both under reference/poster and created a wide happy
+  GitHub and external marketing banner. Saved both under reference/poster and created a wide happy
   morning hero with Mint on the left looking toward the title on the right.
 - 2026-09-05: User requested a smaller pet, a smaller mouse target, smoother
   right-screen movement and placement against the taskbar. Added four size

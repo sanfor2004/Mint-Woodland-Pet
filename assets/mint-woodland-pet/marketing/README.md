@@ -1,6 +1,7 @@
-# Mint Woodland Pet GitHub poster
+# Mint Woodland Pet marketing banner
 
-`github-poster.png` is the wide repository hero image.
+`mint-woodland-pet-banner.png` is the wide reusable marketing banner. It is the
+GitHub README hero and is also intended for external project promotion.
 
 It uses the active Mint character reference for identity and combines two saved
 visual directions:

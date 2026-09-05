@@ -94,7 +94,7 @@ Four-frame art may benefit from additional in-between poses after user review.
 
 ## Latest decision record
 
-2026-09-05: Added a GitHub poster based on two user-supplied visual references.
+2026-09-05: Added a reusable GitHub and external marketing banner based on two user-supplied visual references.
 The final wide pixel-art composition shows Mint on the left in a happy morning
 woodland, looking curiously right toward the exact Mint Woodland Pet title, with
 a soft ground shadow. The source references are retained under
