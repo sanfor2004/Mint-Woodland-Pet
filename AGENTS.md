@@ -2,9 +2,9 @@
 
 ## Current user decisions
 
-Build a small C++ Windows desktop companion named Mint Woodland Pet. Keep the
-existing Pikachu-Pet repository folder for continuity, while using the active
-assets/mint-woodland-pet folder and Mint naming in product-facing text and code.
+Build a small C++ Windows desktop companion named Mint Woodland Pet. Use the
+Mint-Woodland-Pet project folder, assets/mint-woodland-pet asset folder, and Mint
+naming in product-facing text and code.
 
 The user selected the ORIGINAL woodland creature as the replacement character.
 Active reference: assets/mint-woodland-pet/reference/mint-woodland-pet-original.png (mint body, leaf ears,
@@ -96,8 +96,8 @@ loads fixed mood strip paths; keep durations synchronized until that is refactor
 - 2026-09-04: User requested pixel art, eleven moods, JSON dialogue and iterative QA.
 - 2026-09-04: Earlier franchise-art generation attempts were blocked; historical
   prompts/errors remain in sources. Those failures are not the current asset status.
-- 2026-09-05: User renamed the active product to Mint Woodland Pet. The repository
-  folder remains Pikachu-Pet, while active code, assets and documentation use Mint.
+- 2026-09-05: User renamed the product and project folder to Mint Woodland Pet;
+  active code, assets, executable, tools, and documentation use Mint naming.
 - 2026-09-04: User chose the generated woodland reference and authorized all mood generation and continuation. Produced 44 frames and
   integrated eleven strips. Revised idle transparency/layout and happy/thunder
   size drift. Build, asset validation and native-handler smoke checks pass.

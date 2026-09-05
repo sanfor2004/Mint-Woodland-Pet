@@ -1,7 +1,7 @@
 # Open decisions
 
-The woodland character is selected and is named Mint Woodland Pet. Keep the existing
-Pikachu-Pet repository folder, with active assets in assets/mint-woodland-pet. All eleven requested moods are now implemented.
+The woodland character is selected and is named Mint Woodland Pet. Active assets
+live in assets/mint-woodland-pet, and all eleven requested moods are implemented.
 The compact question/answers/settings layout is selected from
 assets/mint-woodland-pet/reference/ui-reference.png.
 

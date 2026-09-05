@@ -5,8 +5,8 @@ Updated 2026-09-05.
 ## Selected character and experience
 
 Mint Woodland Pet is a small, friendly desktop companion. The user selected the
-mint-green woodland creature as the active character. The Pikachu-Pet repository
-folder remains for continuity, while code and active assets use Mint naming.
+mint-green woodland creature as the active character. The project folder, code,
+active assets, executable, tools, and documentation use Mint Woodland Pet naming.
 
 The active reference is assets/mint-woodland-pet/reference/mint-woodland-pet-original.png. Preserve its
 leaf ears, peach flower on viewer-left, plum eyes, cream belly, moss-like body,
@@ -121,8 +121,8 @@ replacement, and rest UI now collapses automatically.
 under assets/mint-woodland-pet/reference, matched the runtime composition and settings icon,
 and synchronized answer hit targets and render previews with the new layout.
 
-2026-09-05: Active product renamed Mint Woodland Pet. The repository remains
-Pikachu-Pet while code, active assets and documentation use Mint naming.
+2026-09-05: The product and project were renamed Mint Woodland Pet across the
+folder, code, active assets, executable, tools, and documentation.
 
 2026-09-04: Original woodland reference accepted; eleven moods generated and
 integrated. See docs/VALIDATION.md and assets/mint-woodland-pet/qa/review.md.

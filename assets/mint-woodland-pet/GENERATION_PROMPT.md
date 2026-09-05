@@ -1,7 +1,7 @@
 # Mint Woodland Pet animation — reusable generation brief
 
 The user selected the original woodland creature as Mint Woodland Pet.
-Attach C:/www/Pikachu-Pet/assets/mint-woodland-pet/reference/mint-woodland-pet-original.png as an actual
+Attach C:/www/Mint-Woodland-Pet/assets/mint-woodland-pet/reference/mint-woodland-pet-original.png as an actual
 reference image. Do not attach the archived yellow character.
 
 ## Master prompt
@@ -54,7 +54,7 @@ three times, record it and report the limitation instead of declaring perfection
 
 ## Save locations
 
-All paths are under C:/www/Pikachu-Pet/assets/mint-woodland-pet/.
+All paths are under C:/www/Mint-Woodland-Pet/assets/mint-woodland-pet/.
 
 - reference/mint-woodland-pet-original.png: selected reference, preserved.
 - sources/<id>/woodland-NN.png: raw candidates.

@@ -4,9 +4,6 @@ Mint Woodland Pet is a native Windows desktop companion. It stays near the edge
 of the desktop, moves with the pointer when dragged, reacts to petting, offers
 local two-choice conversations, and uses eleven prepared pixel-art loops.
 
-The repository folder remains `Pikachu-Pet` for continuity. The active product,
-runtime, assets, tools, UI, and documentation use **Mint Woodland Pet**.
-
 ![Mint Woodland Pet — happy morning pixel-art banner](assets/mint-woodland-pet/marketing/mint-woodland-pet-banner.png)
 
 The reusable marketing banner places a happy, curious Mint on the left looking toward the
@@ -38,6 +35,32 @@ assets so the layout can be checked again after future UI changes.
 - Keeps visible content above the taskbar and uses mixed-DPI-aware monitor coordinates.
 - Runs locally: no account, network service, microphone, typing capture, or
   application-content inspection.
+
+## Completed project changes
+
+- Rebranded the application, executable, code, tools, documentation, and active
+  asset paths as **Mint Woodland Pet**.
+- Replaced the earlier character with the original mint woodland creature and
+  archived the old yellow reference so it is not used for active artwork.
+- Created and integrated 44 transparent sprite frames across eleven four-frame
+  moods, plus runtime strips, loop previews, contact sheets, geometry checks,
+  and reference-comparison material.
+- Matched the approved compact desktop UI with a white question bubble, stacked
+  dark-teal answers, plum monospace text, and an 8 px rounded settings button.
+- Added automatic two-line wrapping and font fitting so long questions remain
+  inside the fixed speech bubble while short questions keep the reference size.
+- Made calm companion mode the default, kept unanswered questions stable,
+  collapsed short rest messages after twelve seconds, and limited automatic
+  check-ins to the resting state.
+- Added smooth live dragging, visible-sprite hit bounds, taskbar-safe placement,
+  monitor switching, per-monitor DPI awareness, and four pet-size presets.
+- Added local branching conversations, twenty greetings, petting reactions,
+  quiet mode, optional Windows voice, idle sleep, and a user-controlled mood demo.
+- Added a reusable morning woodland banner, an optimized GitHub social preview,
+  and saved visual references for future design checks.
+- Open-sourced the software under MIT while keeping original character and
+  marketing artwork under separate asset terms; added contribution, conduct,
+  security, support, ownership, issue, and pull-request documentation.
 
 ## Run
 
