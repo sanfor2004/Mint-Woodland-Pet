@@ -18,6 +18,8 @@
   questions, collapsing rest UI and longer prompt intervals.
 - [x] Four pet-size presets, tighter visible-sprite mouse region, unclamped
   cross-monitor dragging and taskbar-aware visible-content placement.
+- [x] Wide GitHub poster with saved visual references, happy morning woodland,
+  curious rightward gaze, pixel-art title and a soft grounding shadow.
 
 ## Next review
 

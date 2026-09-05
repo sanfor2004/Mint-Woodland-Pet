@@ -94,6 +94,12 @@ Four-frame art may benefit from additional in-between poses after user review.
 
 ## Latest decision record
 
+2026-09-05: Added a GitHub poster based on two user-supplied visual references.
+The final wide pixel-art composition shows Mint on the left in a happy morning
+woodland, looking curiously right toward the exact Mint Woodland Pet title, with
+a soft ground shadow. The source references are retained under
+assets/mint-woodland-pet/reference/poster.
+
 2026-09-05: Companion mode became the default, live dragging was implemented,
 the optional demo was slowed, active questions were protected from timed
 replacement, and rest UI now collapses automatically.

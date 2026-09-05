@@ -7,6 +7,13 @@ local two-choice conversations, and uses eleven prepared pixel-art loops.
 The repository folder remains `Pikachu-Pet` for continuity. The active product,
 runtime, assets, tools, UI, and documentation use **Mint Woodland Pet**.
 
+![Mint Woodland Pet — happy morning pixel-art poster](assets/mint-woodland-pet/marketing/github-poster.png)
+
+The GitHub poster places a happy, curious Mint on the left looking toward the
+pixel-art project title. Its warm morning woodland, crisp pixels, and soft ground
+shadow were developed from the saved poster references while preserving the
+active Mint character design.
+
 ![Mint Woodland Pet mood sheet](assets/mint-woodland-pet/qa/all-moods-contact-sheet.png)
 
 [Watch the combined animation loop](assets/mint-woodland-pet/qa/all-moods-loop-large.gif) ·
@@ -113,6 +120,8 @@ strip dimensions, GIF loop metadata, and dialogue links.
 | `src/json.h` | Small JSON parser used for dialogue. |
 | `data/conversations.json` | Questions, answers, branches, and matching moods. |
 | `assets/mint-woodland-pet/moods/` | Runtime sprites and horizontal strips. |
+| `assets/mint-woodland-pet/marketing/` | GitHub poster and future project artwork. |
+| `assets/mint-woodland-pet/reference/poster/` | Saved morning and pixel-title design references. |
 | `assets/mint-woodland-pet/qa/` | Contact sheets, GIF loops, checks, and review notes. |
 | `tools/` | Asset preparation and validation scripts. |
 | `docs/` | Product specification, delivery plan, technical notes, and validation record. |
